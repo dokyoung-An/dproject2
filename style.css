@@ -1,0 +1,334 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: 
+  "tops"
+  "intro"
+  "bottoms";
+  grid-template-rows: 0.5fr 9fr 0.5fr;
+  grid-template-columns: 1fr ;
+  box-sizing: border-box;
+}
+
+.container .top {
+    width: 100%;
+    height: 100%;
+    grid-area:tops;
+   background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 2fr;
+    padding:0 1em;
+    position: relative;
+}
+
+.container .logo {
+   margin: auto 0;
+}
+
+.container .logo img {
+    width:23%;
+    min-width: 125.5px;
+}
+
+.container .type {
+  margin: auto 0;
+  margin-right: 8em;
+   
+}
+
+.container .type ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    
+}
+
+.container .type ul a {
+    text-decoration: none;
+}
+.container .type ul li {
+    color:#eee;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    border-bottom:0.5px solid #c49159;
+    margin-right: 10px; 
+    font-weight: 500;
+    border-radius: 3px;
+    
+}
+
+.container .type ul li:hover {
+    background-color: #c49159;
+}
+
+.container .type ul a .floor-plan {
+    padding: 0.5em;
+    color:#fff;
+    border: 2px solid #c49159;
+    border-radius: 3px;
+    font-size: 0.8em;
+    cursor: pointer;
+    top:50%;
+    position: absolute;
+    transform: translateY(-50%);
+    min-width: 75px;
+    text-align: center;
+}
+.container .type ul a .floor-plan .a {
+    display: block;
+}
+.container .type ul a .floor-plan .b {
+    display: none;
+}
+
+.container .type .floor-plan:hover {
+    background-color: #c49159;
+}
+
+.container .top .mobile-menu {
+    display: none;
+}
+
+
+
+.container .intro-video {
+   grid-area: intro;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+   
+}
+
+.container .intro-video a {
+   
+   position: absolute;
+   top:80%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 10em;
+   height: 4.5em;
+   line-height: 4.5em;
+   color:#fff;
+   text-decoration: none;
+   text-align: center;
+   overflow: hidden;
+   border-radius: 10px;
+}
+
+
+.container .intro-video a span {
+    
+   font-size: 1.5em;
+   width: 95%;
+   height: 95%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   border: 2px solid #fff;
+   background-color: transparent;
+   z-index: -1;
+   background-color: #222;
+   border-radius: 10px;
+   
+}
+
+.container .intro-video a span:before {
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background-color:#222;
+    top:50%;
+    left: 50%;
+    transition: all 0.2s;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    z-index: -1;
+   
+    
+}
+
+.container .intro-video a:hover span:before {
+    width: 100%;
+    background-color: #ffff;
+    
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+
+
+.container .intro-video a:hover  {
+    color: #222;
+}
+
+
+
+.container .bottom {
+    grid-area: bottoms; 
+    background-color: #000; 
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.container .bottom .number {
+    width: 55%;
+    height: 100%;
+    position: absolute;
+    bottom:0;
+    left:2em;
+  
+}
+
+.container .bottom .number p {
+    color:#fff;
+    width: 100%;
+    font-size: 1.2em;
+    position: absolute;
+    top:50%;
+    transform: translateY(-25%);
+    font-weight: 700;
+    
+}
+
+
+.container .bottom ul {
+    position: absolute;
+    bottom:0;
+    right:2em;
+    width: 45%;
+    height: 100%;
+    padding: 0.1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.container .bottom ul li {
+    font-size: 0.5rem;
+    color:#fff;
+    line-height: 12px;
+   
+}
+.side-menu {
+    display: none;
+}
+
+@media (max-width:460px)  {
+    .container .top {
+        padding:0 0.5em;
+        
+    }
+    .container .type {
+        display: none;
+    }
+    .container .bottom .number p {
+        font-size: 0.9em;
+        font-weight: 400;
+    }
+    .container .top .mobile-menu {
+        display: block;
+        position: absolute;
+        right:1.8em;
+        color: #fff;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    .container .top .mobile-menu span {
+        font-size: 1.8em;
+    }
+    .container .bottom .number {  
+        left:1em;
+    }
+
+
+    .side-menu {
+        width: 75%;
+        height: 100%;
+        position: fixed;
+        background-color: #fff;
+        transform: translateX(100%);
+        right:0;
+        display: block;
+        transition: transform 1s linear;
+    }
+
+    .side-menu.active {
+       transform: translateX(0%);
+    }
+
+    .side-menu .mobile-type {
+        padding: 2em 1em;
+        height: 50%;
+        position: relative;
+        
+
+    }
+    .side-menu .mobile-type .mobile-logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    .side-menu .mobile-type .mobile-logo span {
+        display: block;
+        
+    }
+
+    .side-menu .mobile-type ul {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 25%;
+        left: 1em;
+    }
+    .side-menu .mobile-type ul a {
+        text-decoration: none;
+    }
+    .side-menu .mobile-type ul li{
+        color: #222;
+        font-size: 1.3em;
+        margin-bottom: 2em;
+        position: relative;
+        width: 33%;
+        font-weight: 500;
+    }
+
+    .side-menu .mobile-type ul a li:hover:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+       bottom:-0.2em;
+       background-color: #c49159;
+       animation: line 1.5s linear infinite;
+       transform: transition;
+    }
+
+    @keyframes line {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 100%;
+        }
+        
+    }
+
+
+
+
+}

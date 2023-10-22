@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="0; url='./d74a.html'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="ani.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>인트로 영상 삽입버전</title>
+</head>
+<body>
+    <div class="loading">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="container">
+    <div class="top">
+        <div class="logo">
+            <a href="index.html"><img src="./image/logo.png"></a>
+        </div>
+        <div class="name"></div>
+        <div class="type">
+            <ul>
+                <!-- <a href="main.html"><li class="list1">연립형 B</li></a>
+                <a href="#"></a><li class="list2">연립형 C</li></a>
+                <a href="#"></a><li class="list3">104TYPE</li></a> -->
+            </ul>
+        </div>
+    </div>
+    <div class="intro-video">
+        <video autoplay loop muted>
+            <source src="./image/main.mp4" type="video/mp4" />
+            </video>
+           
+            <a href="d74a.html"><span>SKIP</span></a>
+       
+    </div>
+    <div class="bottom">
+     
+
+    </div> 
+    </div>
+
+     <div data-include-path="ani.html"></div>
+ 
+    
+</body>
+<script src="app.js"></script>
+<script>
+    $(window).ready(function(){
+        $(".loading").delay(2000).fadeOut(1000);
+    });
+</script>
+</html>

@@ -1,0 +1,65 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: 
+  "tops"
+  "house"
+  "bottoms";
+  grid-template-rows: 0.8fr 9fr 0.8fr;
+  grid-template-columns: 1fr ;
+}
+
+.container .top {
+    grid-area:tops;
+   background-color: #222;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding:0 1em;
+}
+
+.container .logo {
+   margin: auto 0;
+   
+}
+
+.container .type {
+    margin:auto 0;
+}
+
+.container .type ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+   
+}
+.container .type ul li {
+    color:#fff;
+    padding: 0 1em;
+    font-size: 1.2em;
+}
+
+.container .model-house {
+  grid-area: house;
+
+
+}
+
+.container .model-house iframe {
+  border:0;
+}
+
+.container .bottom {
+    grid-area: bottoms; 
+    background-color: #222; 
+}
+
+
