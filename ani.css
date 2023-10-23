@@ -5,9 +5,9 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   height: 100vh;
+   height: 90.5vh;
    position: fixed;
-   top:0;
+   top:5.5%;
    left:0;
    width: 100vw;
    z-index: 999;
@@ -15,15 +15,15 @@
 }
 
 .loader {
-width: 150px;
-height: 150px;
+width: 100px;
+height: 100px;
 position: relative;
 
 }
 .loader span {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     background-color: #fff;
     border-radius: 4px;
     animation: chase 2s linear infinite;
