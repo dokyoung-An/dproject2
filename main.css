@@ -30,15 +30,17 @@
    
 }
 
+
 .container .type {
     margin:auto 0;
 }
 
 .container .type ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
+  
    
 }
 .container .type ul li {
