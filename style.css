@@ -60,7 +60,7 @@ body {
 }
 .container .type ul li {
     color:#eee;
-    font-size: 1.2em;
+    font-size: 17px;
     cursor: pointer;
     font-weight: 400; 
     
@@ -211,10 +211,6 @@ body {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         position: relative;
-    }
-
-    .container .type ul li {
-      font-size: 1.1em;
     }
 }
 
